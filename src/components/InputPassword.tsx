@@ -6,7 +6,7 @@ type Props = IInputProps & {
   errorMessage?: string | null;
 }
 
-export function InputPassword({ errorMessage = null, isInvalid, ...rest }: Props) {
+export function InputPassword({ errorMessage = null, isInvalid, secureTextEntry, ...rest }: Props) {
   const invalid = !!errorMessage || isInvalid;
   const [show, setShow] = useState(false);
   return (
